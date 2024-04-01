@@ -1,0 +1,181 @@
+body {
+    margin: 0em;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    background-color: black;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: center;
+    .background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0.6;
+        width: 100%;
+        height: 100vh; /* Or set a specific height */
+        background-image: url("/main/images/bg.webp"); /* Replace with your image path */
+        background-size: cover; /* Resize to fill container */
+        background-repeat: no-repeat; /* Prevent tiling */
+        z-index: -1; /* Optional: Ensure it's behind other content */
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: #525252;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #908e8e; 
+}
+
+
+
+header {
+    position: fixed;
+    padding: 0 2rem;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    width: 93%; /* Optional: Set width to 100% for full viewport width */
+    z-index: 10; /* Optional: Set a higher z-index for stacking order */
+    background-color: #ffffff1a; 
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: white;
+    }
+    .logo img {
+        margin-left: 20px;
+        width: 200px;
+        height: 50px;
+    }
+    a:hover {
+        color: gray;
+    }
+    .navbar{
+        width: 100%;
+        height: 60px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    } 
+    .navbar .links {
+        display: flex;
+        gap: 3rem;
+        margin-left: auto;
+        margin-right: 150px;
+    }
+}
+
+
+.hero {
+    display: flex; /* Enable flexbox layout */
+    width: 100%; /* Make the section fill the viewport width */
+    height: 100vh; /* Set your desired height */
+    .hero-text {
+        display: flex;
+        margin: 20px;
+        color: white; 
+        flex: 1; 
+        align-items: center;
+    }
+    .hero-logo {
+        flex: 1; 
+    }
+    img {
+        float: right;
+        margin-top: 70px;
+        width: 90%; /* Adjust width as needed */
+      }
+}
+
+.mission {
+    height: 100vh;
+    position: relative; /* Make the section the containing element */
+    img {
+        width: 100vw; /* Remove width set to 100% */
+        height: 100vh;
+        object-fit: cover; /* Resize image to cover the entire section */
+        opacity: 0.5;
+    }
+    .mission-text {
+        /* Styles for your text content (optional) */
+        position: absolute; /* Position text on top of the image (optional) */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the text content (optional) */
+        color: white; /* Adjust color for visibility on top of the image (optional) */
+    } 
+}
+
+.features {
+    height: 100vh;
+    position: relative; /* Make the section the containing element */
+    img {
+        width: 100vw; /* Remove width set to 100% */
+        height: 100vh;
+        object-fit: cover; /* Resize image to cover the entire section */
+        opacity: 0.7;
+    }
+    .features-text {
+        /* Styles for your text content (optional) */
+        position: absolute; /* Position text on top of the image (optional) */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the text content (optional) */
+        color: white; /* Adjust color for visibility on top of the image (optional) */
+    } 
+}
+
+.team {
+    height: 100vh;
+    position: relative; /* Make the section the containing element */
+    .team-text {
+        /* Styles for your text content (optional) */
+        position: absolute; /* Position text on top of the image (optional) */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the text content (optional) */
+        color: white; /* Adjust color for visibility on top of the image (optional) */
+    } 
+}
+
+.services {
+    height: 100vh;
+    position: relative; /* Make the section the containing element */
+    .services-text {
+        /* Styles for your text content (optional) */
+        position: absolute; /* Position text on top of the image (optional) */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the text content (optional) */
+        color: white; /* Adjust color for visibility on top of the image (optional) */
+    } 
+}
+
+.contact {
+    height: 100vh;
+    position: relative; /* Make the section the containing element */
+    .contact-text {
+        /* Styles for your text content (optional) */
+        position: absolute; /* Position text on top of the image (optional) */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the text content (optional) */
+        color: white; /* Adjust color for visibility on top of the image (optional) */
+    } 
+}
+
+
+
