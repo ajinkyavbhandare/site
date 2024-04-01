@@ -14,7 +14,7 @@ body .background-image {
   opacity: 0.6;
   width: 100%;
   height: 100vh; /* Or set a specific height */
-  background-image: url("/main/images/bg.webp"); /* Replace with your image path */
+  background-image: url("/images/bg.webp"); /* Replace with your image path */
   background-size: cover; /* Resize to fill container */
   background-repeat: no-repeat; /* Prevent tiling */
   z-index: -1; /* Optional: Ensure it's behind other content */
