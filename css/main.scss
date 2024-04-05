@@ -100,10 +100,10 @@ header {
     }
     .dropdown-menu{
         position: absolute;
-        right: 2rem;
+        right: 5rem;
         top: 60px;
         height: 0px;
-        width: 300px;
+        width: 200px;
         background: rgba(255, 255, 255, 0.126);
         backdrop-filter: blur(15px);
         border-radius: 10px;
@@ -137,6 +137,16 @@ header {
         color: white; 
         flex: 1; 
         align-items: center;
+        margin-left: 80px;
+        .mobile-break {
+            display: none; /* Hide line breaks on mobile */
+          }
+        h1 {
+            font-size: 4rem;
+        }
+        p {
+            font-size: 1.5rem;
+        }
     }
     .hero-logo {
         flex: 1; 
@@ -144,9 +154,41 @@ header {
     img {
         float: right;
         margin-top: 70px;
-        width: 90%; /* Adjust width as needed */
+        width: 90%;
       }
 }
+@media (max-width: 768px) { 
+    .hero {
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        img {
+            float: right;
+            margin-top: 0px;
+            width: 90%;
+          }
+        .hero-text {
+            margin-top: 40px;
+            display: flex;
+            color: white; 
+            flex: 1; 
+            align-items: center;
+            .mobile-break {
+                display: block; /* Hide line breaks on mobile */
+              }
+            .laptop-break {
+                display: none;
+            }  
+            h1 {
+                font-size: 1.7rem;
+            }
+            p {
+                font-size: 1rem;
+                margin-right: 25px;
+            }
+        }
+    }
+    }
 
 .mission {
     height: 100vh;

@@ -102,10 +102,10 @@ header .navbar .toggle-button {
 }
 header .dropdown-menu {
   position: absolute;
-  right: 2rem;
+  right: 5rem;
   top: 60px;
   height: 0px;
-  width: 300px;
+  width: 200px;
   background: rgba(255, 255, 255, 0.126);
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
@@ -137,6 +137,16 @@ header .dropdown-menu {
   color: white;
   flex: 1;
   align-items: center;
+  margin-left: 80px;
+}
+.hero .hero-text .mobile-break {
+  display: none; /* Hide line breaks on mobile */
+}
+.hero .hero-text h1 {
+  font-size: 4rem;
+}
+.hero .hero-text p {
+  font-size: 1.5rem;
 }
 .hero .hero-logo {
   flex: 1;
@@ -144,9 +154,41 @@ header .dropdown-menu {
 .hero img {
   float: right;
   margin-top: 70px;
-  width: 90%; /* Adjust width as needed */
+  width: 90%;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+  }
+  .hero img {
+    float: right;
+    margin-top: 0px;
+    width: 90%;
+  }
+  .hero .hero-text {
+    margin-top: 40px;
+    display: flex;
+    color: white;
+    flex: 1;
+    align-items: center;
+  }
+  .hero .hero-text .mobile-break {
+    display: block; /* Hide line breaks on mobile */
+  }
+  .hero .hero-text .laptop-break {
+    display: none;
+  }
+  .hero .hero-text h1 {
+    font-size: 1.7rem;
+  }
+  .hero .hero-text p {
+    font-size: 1rem;
+    margin-right: 25px;
+  }
+}
 .mission {
   height: 100vh;
   position: relative; /* Make the section the containing element */
