@@ -4,24 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>assecure</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" /> 
 </head>
 <body>
     <div class="wrapper">
         <header>
             <div class="navbar">
-                <div class="logo"><img src="images/fullLogo.svg" ></div>
+                <div class="logo"><img src="images/fullLogo.svg" /></div>
                 <ul class="links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="toggle-buttoon">
-                    <i class="fa-solid fa-bars-staggered"></i>
+                <div class="toggle-button">
+                    <img src="images/bars.svg"/>
+                </div>
+                <div class="dropdown-menu">
+                    <li></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </div>
             </div>
         </header>
+        <script>
+            const toggleBtn = document.querySelector('.toggle-button')
+            const toggleBtnIcon = document.querySelector('.toggle-button i')
+            const dropDownMenu = document.querySelector('.dropdown-menu')
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+                toggleBtnIcon.classList = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars'
+            }
+        </script>
         <section id="home" class="hero">
             <section class="hero-text">
                 <div>
