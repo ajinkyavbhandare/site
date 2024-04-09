@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>assecure</title>
-    <meta http-equiv="Cache-Control" content="no-cache"> 
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link rel="icon" href="images/steel-logo.svg"> 
     <link rel="stylesheet" href="css/main.css" /> 
 </head>
 <body>
     <div class="wrapper">
         <header>
             <div class="navbar">
-                <div class="logo"><img src="images/fullLogo.svg" /></div>
+                <div class="logo"><img src="images/fullLogo.svg" alt="logo" /></div>
                 <ul class="links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -19,7 +20,7 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="toggle-button">
-                    <img src="images/bars.svg"/>
+                    <img src="images/bars.svg" alt="responsive dropdown"/>
                 </div>
                 <div class="dropdown-menu">
                     <li></li>
@@ -90,11 +91,30 @@
         </section>
         </section>
         <section class="contact" id="contact">
-            <div class="contact-text">
+            <h1>Contact Us</h1>
+            <section class="contact-form">
+                <form action="https://formspree.io/f/moqgpvvr" method="POST">
+                    <label>
+                        Your email:
+                        <input type="email" name="email">
+                    </label>
+                        <label>
+                        Your message:
+                        <textarea name="message"></textarea>
+                    </label>
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+            <section class="contact-text">
                 <p class="title">contact</p>
-            </div>
+            </section>
         </section>
         <div class="background-image"><img src="images/bg.webp" alt=""></div>  <!-- main background image -->
+        <footer>
+            <div class="footer">
+                
+            </div>
+        </footer>
     </div>
 </body>
 </html>   
