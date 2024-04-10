@@ -296,11 +296,11 @@ header .dropdown-menu {
   -webkit-text-fill-color: rgb(255, 255, 255);
   background-color: rgba(82, 82, 82, 0.2823529412);
   border-radius: 20px;
-}
-.contact .c-row .form form textarea {
-  height: 150px;
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
+}
+.contact .c-row .form form textarea {
+  height: 80px;
 }
 .contact .c-row .form form button[type=submit] {
   background-color: rgba(164, 164, 164, 0.3882352941);
@@ -314,7 +314,7 @@ header .dropdown-menu {
 }
 .contact .c-row .contact-text {
   width: 50vw;
-  margin-left: 12vw;
+  margin-left: 10vw;
   font-size: 1.1rem;
 }
 .contact .c-row .contact-text .dir-contact {

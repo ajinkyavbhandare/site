@@ -289,10 +289,10 @@ header {
                 -webkit-text-fill-color: rgb(255, 255, 255);
                 background-color: #52525248;
                 border-radius: 20px;
+                backdrop-filter: blur(20px);
             }
             form textarea {
-                height: 150px;
-                backdrop-filter: blur(20px);
+                height: 80px;
             }
             form button[type="submit"] {
                 background-color: #a4a4a463;
@@ -307,7 +307,7 @@ header {
         }
         .contact-text {
             width: 50vw;
-            margin-left: 12vw;
+            margin-left: 10vw;
             font-size: 1.1rem;
             .dir-contact {
                 align-items: center;
