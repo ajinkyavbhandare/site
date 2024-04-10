@@ -262,56 +262,59 @@ header .dropdown-menu {
 }
 
 .contact {
-  align-items: center;
   display: flex; /* Enable flexbox layout */
   width: 100%; /* Make the section fill the viewport width */
   height: 100vh; /* Set your desired height */
 }
-.contact .contact-form {
+.contact .content-heading {
+  margin-top: 15vh;
+  margin-left: 40px;
+  font-size: xx-large;
+}
+.contact .c-row {
+  margin-top: 10vh;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.contact .c-row .form {
   margin: 20px;
   display: flex;
-  flex: 1;
+  width: 50vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.contact .contact-text {
-  margin: 20px;
-  display: flex;
-  flex: 1;
-}
-.contact h2 {
-  /* Styles for your heading */
-  text-align: center; /* Center the heading */
-  margin-top: 20px; /* Add some space above the section */
-}
-
-form {
-  /* Styles for the entire form */
-  margin: 20px;
+.contact .c-row .form input[type=text], .contact .c-row .form input[type=email], .contact .c-row .form textarea {
+  width: 40vw;
+  height: 25px;
+  margin: 8px;
   padding: 10px;
-  border: 1px solid #ccc;
-}
-
-form label {
-  /* Styles for labels */
-  display: block; /* Make labels appear on new lines */
-  margin-bottom: 5px;
-}
-
-form input[type=email],
-form textarea {
-  /* Styles for email input and textarea */
-  width: 100%;
-  padding: 5px;
-  border: 1px solid #ddd;
-}
-
-form button[type=submit] {
-  /* Styles for submit button */
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  background-color: rgba(82, 82, 82, 0.2823529412);
+  border-radius: 20px;
+}
+.contact .c-row .form form textarea {
+  height: 150px;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+.contact .c-row .form form button[type=submit] {
+  background-color: rgba(164, 164, 164, 0.3882352941);
+  color: white;
+  margin: 0 auto;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
   cursor: pointer;
+}
+.contact .c-row .contact-text {
+  width: 50vw;
+  font-size: 1rem;
+  margin: 20px;
 }
 
 .footer {

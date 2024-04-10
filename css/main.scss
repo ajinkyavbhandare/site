@@ -258,58 +258,62 @@ header {
 }
 
 .contact {
-    align-items: center;
     display: flex; /* Enable flexbox layout */
     width: 100%; /* Make the section fill the viewport width */
     height: 100vh; /* Set your desired height */
-    .contact-form {
-        margin: 20px;
-        display: flex;
-        flex: 1;
+    .content-heading {
+        margin-top: 15vh;
+        margin-left: 40px;
+        font-size:xx-large;
     }
-    .contact-text {
-        margin: 20px;
+    .c-row {
+        margin-top: 10vh;
+        height: 60vh;
         display: flex;
-        flex: 1;
-    } 
-    h2 {
-        /* Styles for your heading */
-        text-align: center;  /* Center the heading */
-        margin-top: 20px;  /* Add some space above the section */
-      }
+        flex-direction: row;
+        align-items: center;
+        .form {
+            margin: 20px;
+            display: flex;
+            width: 50vw;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            input[type="text"], input[type="email"], textarea {
+                width: 40vw;
+                height: 25px;
+                margin: 8px;
+                padding: 10px;
+                border: none;
+                -webkit-text-fill-color: rgb(255, 255, 255);
+                background-color: #52525248;
+                border-radius: 20px;
+            }
+            form textarea {
+                height: 150px;
+                backdrop-filter: blur(20px);
+            }
+            form button[type="submit"] {
+                background-color: #a4a4a463;
+                color: white;
+                margin: 0 auto;
+                width: 100%;
+                padding: 10px 20px;
+                border-radius: 20px;
+                border: none;
+                cursor: pointer;
+              }
+        }
+        .contact-text {
+            width: 50vw;
+            font-size: 1rem;
+            margin: 20px;
+        }
+    }
 }
 
 
-form {
-    /* Styles for the entire form */
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-  }
-  
-  form label {
-    /* Styles for labels */
-    display: block;  /* Make labels appear on new lines */
-    margin-bottom: 5px;
-  }
-  
-  form input[type="email"],
-  form textarea {
-    /* Styles for email input and textarea */
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ddd;
-  }
-  
-  form button[type="submit"] {
-    /* Styles for submit button */
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+
   
 .footer {
     background-color: rgba(98, 98, 98, 0.209);
