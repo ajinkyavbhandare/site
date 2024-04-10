@@ -308,9 +308,9 @@ header .dropdown-menu {
   align-items: center;
   background-color: rgba(164, 164, 164, 0.3882352941);
   color: white;
-  margin: 0 auto;
-  width: 20vw;
-  padding: 10px 20px;
+  margin: 8px;
+  width: 41vw;
+  padding: 10px;
   border-radius: 20px;
   border: none;
   cursor: pointer;
