@@ -143,11 +143,12 @@ header {
         .mobile-break {
             display: none; /* Hide line breaks on mobile */
           }
-        h1 {
+        .heading {
             font-size: 4rem;
         }
-        p {
+        .subhead {
             font-size: 1.5rem;
+            font-weight: 100;
         }
     }
     .hero-logo {
@@ -306,8 +307,14 @@ header {
         }
         .contact-text {
             width: 50vw;
-            font-size: 1rem;
-            margin: 20px;
+            margin-left: 12vw;
+            font-size: 1.1rem;
+            .dir-contact {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+            }
         }
     }
 }

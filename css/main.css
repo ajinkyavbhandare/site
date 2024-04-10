@@ -147,11 +147,12 @@ header .dropdown-menu {
 .hero .hero-text .mobile-break {
   display: none; /* Hide line breaks on mobile */
 }
-.hero .hero-text h1 {
+.hero .hero-text .heading {
   font-size: 4rem;
 }
-.hero .hero-text p {
+.hero .hero-text .subhead {
   font-size: 1.5rem;
+  font-weight: 100;
 }
 .hero .hero-logo {
   flex: 1;
@@ -313,8 +314,14 @@ header .dropdown-menu {
 }
 .contact .c-row .contact-text {
   width: 50vw;
-  font-size: 1rem;
-  margin: 20px;
+  margin-left: 12vw;
+  font-size: 1.1rem;
+}
+.contact .c-row .contact-text .dir-contact {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .footer {
