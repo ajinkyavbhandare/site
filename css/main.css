@@ -235,43 +235,138 @@ header .dropdown-menu {
 }
 
 .mission {
+  display: flex;
+  width: 100%;
   height: 100vh;
-  position: relative; /* Make the section the containing element */
+  justify-content: flex-end;
 }
-.mission img {
-  width: 100vw; /* Remove width set to 100% */
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover; /* Resize image to cover the entire section */
-  opacity: 0.5;
-}
+
 .mission .mission-text {
-  /* Styles for your text content (optional) */
-  position: absolute; /* Position text on top of the image (optional) */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center the text content (optional) */
-  color: white; /* Adjust color for visibility on top of the image (optional) */
+  display: flex;
+  margin: 20px;
+  color: white;
+  flex: 1;
+  align-items: center;
+  margin-right: 80px;
+  max-width: 50%;
+  justify-content: flex-end;
+}
+
+.mission .mission-text .heading {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ffffff, #a8a8a8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mission .mission-text .subhead {
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .mission .mission-text {
+    margin-right: 40px;
+  }
+  
+  .mission .mission-text .heading {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission {
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+  }
+
+  .mission .mission-text {
+    margin-right: 20px;
+    margin-top: 100px;
+    max-width: 100%;
+  }
+
+  .mission .mission-text .heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .mission .mission-text .subhead {
+    font-size: 1rem;
+    margin-right: 25px;
+  }
 }
 
 .features {
+  display: flex;
+  width: 100%;
   height: 100vh;
-  position: relative; /* Make the section the containing element */
+  justify-content: flex-start;
 }
-.features img {
-  width: 100vw; /* Remove width set to 100% */
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover; /* Resize image to cover the entire section */
-  opacity: 0.7;
-}
+
 .features .features-text {
-  /* Styles for your text content (optional) */
-  position: absolute; /* Position text on top of the image (optional) */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center the text content (optional) */
-  color: white; /* Adjust color for visibility on top of the image (optional) */
+  display: flex;
+  margin: 20px;
+  color: white;
+  flex: 1;
+  align-items: center;
+  margin-left: 80px;
+  max-width: 50%;
+}
+
+.features .features-text .heading {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ffffff, #a8a8a8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.features .features-text .subhead {
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .features .features-text {
+    margin-left: 40px;
+  }
+  
+  .features .features-text .heading {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+  }
+
+  .features .features-text {
+    margin-left: 20px;
+    margin-top: 100px;
+    max-width: 100%;
+  }
+
+  .features .features-text .heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .features .features-text .subhead {
+    font-size: 1rem;
+    margin-right: 25px;
+  }
 }
 
 .team {
@@ -722,4 +817,23 @@ header .dropdown-menu {
     font-size: 1.3rem;
     margin-top: 10vh;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+@media (max-width: 992px) {
+  .mission .mission-text .heading,
+  .features .features-text .heading {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission .mission-text .heading,
+  .features .features-text .heading {
+    font-size: 2rem;
+  }
+
+  .mission .mission-text .subhead,
+  .features .features-text .subhead {
+    font-size: 1rem;
+  }
+}
