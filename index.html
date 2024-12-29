@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>assecure</title>
     <meta http-equiv="Cache-Control" content="no-cache">
     <link rel="icon" href="images/steel-logo.svg"> 
@@ -33,15 +33,26 @@
         </header>
         <script>
             const toggleBtn = document.querySelector('.toggle-button')
-            const toggleBtnIcon = document.querySelector('.toggle-button i')
             const dropDownMenu = document.querySelector('.dropdown-menu')
+            
             toggleBtn.onclick = function () {
                 dropDownMenu.classList.toggle('open')
-                const isOpen = dropDownMenu.classList.contains('open')
-                toggleBtnIcon.classList = isOpen
-                    ? 'fa-solid fa-xmark'
-                    : 'fa-solid fa-bars'
             }
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!toggleBtn.contains(event.target) && !dropDownMenu.contains(event.target)) {
+                    dropDownMenu.classList.remove('open')
+                }
+            })
+
+            // Close menu when clicking a link
+            const dropdownLinks = dropDownMenu.querySelectorAll('a')
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    dropDownMenu.classList.remove('open')
+                })
+            })
         </script>
         <section id="home" class="hero">
             <section class="hero-text">
@@ -79,14 +90,89 @@
                     solutions for their specific requirements</p>
             </div>
         </section>
-        <section class="team">
+        <section class="team" id="team">
             <div class="team-text">
-                <p class="title">team</p>
+                <p class="title">Team</p>
+                <h2>Meet the Architects</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/placeholder.jpg" alt="team member">
+                    </div>
+                    <h3>john doe</h3>
+                    <p class="role">full stack web developer</p>
+                    <p class="education">btech computer science</p>
+                    <p class="experience">2 years of experience</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/placeholder.jpg" alt="team member">
+                    </div>
+                    <h3>john doe</h3>
+                    <p class="role">full stack web developer</p>
+                    <p class="education">btech computer science</p>
+                    <p class="experience">2 years of experience</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/placeholder.jpg" alt="team member">
+                    </div>
+                    <h3>john doe</h3>
+                    <p class="role">full stack web developer</p>
+                    <p class="education">btech computer science</p>
+                    <p class="experience">2 years of experience</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/placeholder.jpg" alt="team member">
+                    </div>
+                    <h3>john doe</h3>
+                    <p class="role">full stack web developer</p>
+                    <p class="education">btech computer science</p>
+                    <p class="experience">2 years of experience</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="images/placeholder.jpg" alt="team member">
+                    </div>
+                    <h3>john doe</h3>
+                    <p class="role">full stack web developer</p>
+                    <p class="education">btech computer science</p>
+                    <p class="experience">2 years of experience</p>
+                </div>
             </div>
         </section>
         <section class="services" id="services">
             <div class="services-text">
                 <p class="title">services</p>
+                <h2>Our Diverse Expertise in the Software Industry</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>blockchain and web3:</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                </div>
+                <div class="service-item">
+                    <h3>AI and Data Engineering:</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Android and application:</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Devops and cloud computing:</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Full Stack Web Development:</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                </div>
+                <div class="service-item">
+                    <h3>web design and animation:</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                </div>
             </div>
         </section>
         <section class="contact" id="contact">
@@ -147,7 +233,20 @@
         </section>
         <div class="background-image"><img src="images/bg.webp" alt=""></div>  
         <footer>
-            <div class="footer"> 
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <img src="images/fullLogo.svg" alt="logo" class="footer-logo" />
+                    </div>
+                    <div class="footer-right">
+                        <div class="social-links">
+                            <a href="#" target="_blank"><img src="images/x.svg" alt="X" /></a>
+                            <a href="#" target="_blank"><img src="images/instagram.svg" alt="Instagram" /></a>
+                            <a href="#" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" /></a>
+                        </div>
+                        <p class="copyright">Copyright © 2024 - All Rights Reserved</p>
+                    </div>
+                </div>
             </div>
         </footer>
     </div>
