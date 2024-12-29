@@ -1,3 +1,9 @@
+:root {
+  --desktop: 1200px;
+  --tablet: 992px;
+  --mobile: 768px;
+}
+
 body {
   margin: 0em;
   font-family: "Open Sans", sans-serif;
@@ -93,6 +99,16 @@ header .navbar .toggle-button {
   header .navbar .toggle-button {
     position: fixed;
     display: block;
+    right: 40px;
+  }
+  
+  header .navbar .links {
+    display: none;
+  }
+  
+  header .navbar .logo img {
+    width: 150px;
+    height: 70px;
   }
 }
 @media (max-width: 480px) {
@@ -196,6 +212,28 @@ header .dropdown-menu {
     margin-right: 25px;
   }
 }
+
+@media (max-width: 992px) {
+  .hero .hero-text .heading {
+    font-size: 3rem;
+  }
+  
+  .hero .hero-text {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .hero-text .heading {
+    font-size: 2rem;
+  }
+  
+  .hero .hero-text {
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+}
+
 .mission {
   height: 100vh;
   position: relative; /* Make the section the containing element */
@@ -237,29 +275,215 @@ header .dropdown-menu {
 }
 
 .team {
-  height: 100vh;
-  position: relative; /* Make the section the containing element */
+  min-height: 100vh;
+  position: relative;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
 }
+
 .team .team-text {
-  /* Styles for your text content (optional) */
-  position: absolute; /* Position text on top of the image (optional) */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center the text content (optional) */
-  color: white; /* Adjust color for visibility on top of the image (optional) */
+  position: static;
+  transform: none;
+  text-align: left;
+  margin-top: 60px;
+}
+
+.team .team-text .title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.team .team-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.team-member {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.member-image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 6px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  line-height: 1;
+}
+
+.team-member .role {
+  font-size: 1rem;
+  margin: 0.2rem;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+.team-member .education {
+  font-size: 1rem;
+  margin: 0.2rem;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+.team-member .experience {
+  font-size: 1rem;
+  margin: 0.2rem;
+  padding: 0;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+/* Responsive styles matching services section */
+@media (max-width: 992px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .team .team-text h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .team {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .team .team-text {
+    margin-top: 100px;
+  }
+  
+  .team .team-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .team-member {
+    padding: 15px;
+  }
+
+  .member-image {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .services {
   height: 100vh;
-  position: relative; /* Make the section the containing element */
+  position: relative;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
 }
+
 .services .services-text {
-  /* Styles for your text content (optional) */
-  position: absolute; /* Position text on top of the image (optional) */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center the text content (optional) */
-  color: white; /* Adjust color for visibility on top of the image (optional) */
+  position: static; /* Remove absolute positioning */
+  transform: none;
+  text-align: left;
+  margin-top: 60px;
+}
+
+.services .services-text .title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.services .services-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.service-item {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+.service-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Add responsive styles for services section */
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .services .services-text h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .services .services-text {
+    margin-top: 100px;
+  }
+  
+  .services .services-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .service-item {
+    padding: 15px;
+  }
 }
 
 .contact {
@@ -328,8 +552,174 @@ header .dropdown-menu {
 }
 
 .footer {
-  background-color: rgba(98, 98, 98, 0.209);
-  height: 20vh;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  background-color: rgba(128, 128, 128, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 20px 40px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  width: 150px;
+  height: auto;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.social-links img:hover {
+  opacity: 1;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .footer-logo {
+    width: 120px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact .c-row {
+    flex-direction: column;
+    margin-top: 5vh;
+  }
+  
+  .contact .c-row .form {
+    width: 90vw;
+  }
+  
+  .contact .c-row .form input[type="text"],
+  .contact .c-row .form input[type="email"],
+  .contact .c-row .form textarea,
+  .contact .c-row .form form button[type="submit"] {
+    width: 80vw;
+  }
+  
+  .contact .c-row .contact-text {
+    width: 90vw;
+    margin-left: 20px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact .content-heading {
+    margin-left: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .contact .c-row .contact-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .mission .mission-text,
+  .features .features-text {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission .mission-text,
+  .features .features-text {
+    width: 90%;
+  }
+  
+  .mission .mission-text .title,
+  .features .features-text .title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Add responsive styles for contact section to prevent overlap */
+@media (max-width: 768px) {
+  .contact {
+    min-height: 100vh;
+    height: auto; /* Allow contact section to expand */
+    padding-bottom: 40px; /* Add padding at bottom */
+  }
+  
+  .contact .c-row {
+    height: auto; /* Allow row to expand */
+    margin-bottom: 30px;
+  }
+  
+  .contact .c-row .contact-text {
+    margin-bottom: 40px;
+  }
+  
+  /* Ensure footer stays at bottom */
+  .wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer {
+    margin-top: auto; /* Push footer to bottom */
+  }
+}
+
+/* Additional fixes for very small screens */
+@media (max-width: 480px) {
+  .contact .c-row .form input[type="text"],
+  .contact .c-row .form input[type="email"],
+  .contact .c-row .form textarea,
+  .contact .c-row .form form button[type="submit"] {
+    width: 85vw; /* Slightly smaller width on very small screens */
+  }
+  
+  .contact .content-heading {
+    font-size: 1.3rem;
+    margin-top: 10vh;
+  }
 }/*# sourceMappingURL=main.css.map */
