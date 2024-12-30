@@ -833,7 +833,7 @@ header .dropdown-menu {
 .companies-text {
     text-align: left;
     margin-bottom: 40px;
-    padding-left: 20px;
+    padding-left: 50px;
 }
 
 .companies-text .title {
@@ -966,8 +966,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .projects-text {
     text-align: left;
-    margin-bottom: 40px;
-    padding-left: 20px;
+    margin-bottom: 10px;
+    padding-left: 50px;
 }
 
 .projects-text .title {
