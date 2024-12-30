@@ -173,6 +173,81 @@
                 </div>
             </div>
         </section>
+        <section class="projects">
+            <div class="projects-text">
+                <p class="title">Featured Projects:</p>
+                <h2>View Our Work and Results</h2>
+            </div>
+            <div class="projects-container">
+                <div class="projects-track">
+                    <!-- Project 1 -->
+                    <div class="project-item">
+                        <div class="project-content">
+                            <h3>E-Commerce Website: Enabling Seamless Online Shopping Experiences</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            <a href="https://project-link.com" target="_blank" class="project-image-link">
+                                <img src="images/img.png" alt="Project 1" class="project-image">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Project 2-6 -->
+                    <div class="project-item">
+                        <div class="project-content">
+                            <h3>E-Commerce Website: Enabling Seamless Online Shopping Experiences</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                            <img src="images/img.png" alt="Project 2" class="project-image">
+                        </div>
+                    </div>
+                    <!-- Add remaining project items with the same structure -->
+                </div>
+                <div class="scroll-dots projects-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+        <section class="companies">
+            <div class="companies-text">
+                <p class="title">Our Clients</p>
+                <h2>Trusted by Leading Companies</h2>
+            </div>
+            <div class="companies-container">
+                <div class="companies-track">
+                    <div class="company-logo">
+                        <img src="images/fullLogo.svg" alt="Company 1">
+                    </div>
+                    <div class="company-logo">
+                        <img src="images/fullLogo.svg" alt="Company 2">
+                    </div>
+                    <div class="company-logo">
+                        <img src="images/fullLogo.svg" alt="Company 3">
+                    </div>
+                    <div class="company-logo">
+                        <img src="images/fullLogo.svg" alt="Company 4">
+                    </div>
+                    <div class="company-logo">
+                        <img src="images/fullLogo.svg" alt="Company 5">
+                    </div>
+                    <div class="company-logo">
+                        <img src="images/fullLogo.svg" alt="Company 1">
+                    </div>
+                    <div class="company-logo">
+                        <img src="images/fullLogo.svg" alt="Company 2">
+                    </div>
+                    <div class="company-logo">
+                        <img src="images/fullLogo.svg" alt="Company 3">
+                    </div>
+                </div>
+                <div class="scroll-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
         <section class="contact" id="contact">
             <div class="contact-content">
                 <div class="content-heading">
@@ -248,5 +323,28 @@
             </div>
         </footer>
     </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const projectTrack = document.querySelector('.projects-track');
+        const projectDots = document.querySelectorAll('.projects-dots .dot');
+        
+        function updateProjectSlider(index) {
+            const offset = index * -16.666 + '%';
+            projectTrack.style.transform = `translateX(${offset})`;
+            
+            // Update active dot
+            projectDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        // Add click event listeners to dots
+        projectDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                updateProjectSlider(index);
+            });
+        });
+    });
+    </script>
 </body>
 </html>   
