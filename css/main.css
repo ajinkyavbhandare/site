@@ -822,3 +822,353 @@ header .dropdown-menu {
     font-size: 1rem;
   }
 }
+
+/* Add these styles for the companies section */
+.companies {
+    width: 100%;
+    padding: 40px 0;
+    position: relative;
+}
+
+.companies-text {
+    text-align: left;
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+.companies-text .title {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.companies-text h2 {
+    font-size: 35px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.companies-container {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.companies-track {
+    display: flex;
+    gap: 120px; /* Increased gap between logos */
+    padding: 0 40px;
+    transition: transform 0.5s ease-in-out;
+    animation: scrollCompanies 20s linear infinite;
+}
+
+.companies-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollCompanies {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-270px * 3)); /* (logo width + gap) * number of original logos */
+    }
+}
+
+.company-logo {
+    flex: 0 0 200px; /* Increased width for fullLogo.svg */
+    height: 100px; /* Increased height for fullLogo.svg */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.company-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+/* Dots styling */
+.scroll-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Add this JavaScript to handle dot navigation */
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.companies-track');
+    const dots = document.querySelectorAll('.dot');
+    const itemWidth = 230; // logo width + gap
+    let currentIndex = 0;
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateSlider();
+        });
+    });
+
+    function updateSlider() {
+        const offset = -currentIndex * itemWidth;
+        track.style.transform = `translateX(${offset}px)`;
+        
+        // Update active dot
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+});
+</script>
+
+/* Update animation calculation for new logo width */
+@keyframes scrollCompanies {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-320px * 3)); /* (new logo width + gap) * number of original logos */
+    }
+}
+
+.projects {
+    width: 100%;
+    padding: 40px 0;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.projects-text {
+    text-align: left;
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+.projects-text .title {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.projects-text h2 {
+    font-size: 35px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.projects-container {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.projects-track {
+    display: flex;
+    width: 600%; /* 100% * number of projects */
+    transition: transform 0.5s ease-in-out;
+}
+
+.project-item {
+    flex: 0 0 16.666%;
+    max-width: 16.666%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.project-content {
+    position: relative;
+    padding: 60px;
+    background: transparent;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+.project-content h3 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    max-width: 45%;
+    line-height: 1.2;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.project-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    max-width: 40%;
+    opacity: 0.8;
+    position: relative;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 90%;
+    object-fit: cover;
+    z-index: 0;
+    border-radius: 20px;
+    margin: 25px;
+}
+
+.projects-dots {
+    margin-top: 30px;
+}
+
+.projects-dots .dot {
+    width: 10px;
+    height: 10px;
+}
+
+/* Add this JavaScript for projects slider */
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.projects-track');
+    const dots = document.querySelectorAll('.projects-dots .dot');
+    const itemWidth = track.querySelector('.project-item').offsetWidth + 40; // width + gap
+    let currentIndex = 0;
+
+    function updateProjectSlider() {
+        const offset = -currentIndex * itemWidth;
+        track.style.transform = `translateX(${offset}px)`;
+        
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentIndex = index;
+            updateProjectSlider();
+        });
+    });
+});
+</script>
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .project-content {
+        padding: 40px;
+        height: auto; /* Changed to auto height */
+        min-height: 500px;
+    }
+
+    .project-content h3 {
+        font-size: 28px;
+        max-width: 60%;
+    }
+
+    .project-content p {
+        max-width: 55%;
+    }
+
+    .project-image {
+        width: 45%;
+        opacity: 1; /* Keep image fully visible */
+    }
+}
+
+@media (max-width: 768px) {
+    .project-content {
+        padding: 30px;
+        flex-direction: column; /* Stack content vertically */
+        height: auto;
+        min-height: 600px;
+    }
+
+    .project-content h3 {
+        font-size: 24px;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .project-content p {
+        font-size: 14px;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .project-image {
+        position: relative; /* Change from absolute to relative */
+        width: 100%;
+        height: 300px; /* Fixed height for mobile */
+        margin: 20px 0 0 0;
+        opacity: 1;
+        top: auto;
+        right: auto;
+    }
+}
+
+/* Add these styles for the clickable image */
+.project-image-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35%;
+    height: 90%;
+    margin: 25px;
+    z-index: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-image-link:hover {
+    transform: scale(1.02);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .project-image-link {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        margin: 20px 0 0 0;
+    }
+}
